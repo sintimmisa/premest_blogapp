@@ -24,10 +24,7 @@ const Login = () => {
         e.preventDefault();
         if (username === "sim" && password === "123") {
             alert("Login Successfull ")
-            console.log(loginData); 
-            
-           
-            
+            console.log(loginData);          
         }
         else {
             console.log("Wrong username or password");
@@ -41,7 +38,7 @@ const Login = () => {
        
        
       <div className="login mt-5">
-        <form action="localhost:3000/createpost" method="POST">
+        <form action="/createpost" method="GET" onSubmit={handleSubmit}>
           <h2 className="text-center">Login</h2>
           <div className="form-group px-5">
             <div className="input-group mb-3">
@@ -85,7 +82,7 @@ const Login = () => {
             <div className="form-group">
               <Link to='/'
                 type="button"
-                className="btn btn-primary btn-block btn-lg" onClick={handleSubmit}
+                className="btn btn-primary btn-block btn-lg" onSubmit={handleSubmit}
                
             >
                
@@ -96,7 +93,7 @@ const Login = () => {
             <div className="text-center">
               Don't have an account?{" "}
                         <Link to="/signup">Create an Account here</Link>.
-                        {JSON.stringify(loginData)}
+                        
             </div>
           </div>
         </form>

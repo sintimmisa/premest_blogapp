@@ -44,7 +44,7 @@ const Blog = () => {
     <div className="container">
       <h4>Blog</h4>
       <div className="row" >
-        <div className="col-md-4">
+        <div className="col-md-3">
           <BlogList post={post} />
         </div>
         
